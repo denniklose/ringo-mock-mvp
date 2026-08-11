@@ -1,0 +1,9 @@
+import Image from "next/image";
+import Link from "next/link";
+import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
+import { site } from "../chaarisma-website-2026-data";
+
+export default function AboutPage() {
+  return <main className="inner-page about-page"><SiteHeader inner /><section className="about-intro"><p className="eyebrow">Friseursalon Chaarisma · Daaden</p><h1>Wer sind wir?</h1><figure className="about-silhouette"><Image src="/images/wer-sind-wir-silhouettes.png" alt="Kreative Silhouetten-Grafik als Platzhalterbild für das Chaarisma-Team" fill priority sizes="(max-width: 760px) 94vw, 76vw" /></figure><div className="about-copy"><p>Chaarisma ist der Friseursalon von Steffi Groß in Daaden. Wir bieten kreative Dienstleistungen rund um das Thema Haar und Schönheit.</p><p>Der Salon soll ein Ort sein, an dem du dich wohlfühlst: Neben Pflege und Beratung trägt der persönliche Flair des Salons dazu bei, deinen Besuch zu genießen.</p><p>Das offizielle Kreativ-Team, die Adresse und die aktuellen Leistungsbereiche findest du auf dieser Website und in der bestehenden Online-Buchung.</p><a className="button button-primary" href={site.bookingUrl}>Termin buchen</a></div></section><section className="inner-note-section inner-note-section-dark"><p className="section-kicker">Chaarisma in Daaden</p><h2>Haar, Schönheit und ein gutes Gefühl.</h2><p>Besuche uns in der Saynischen Str. 67 oder vereinbare deinen Termin direkt online.</p><div className="final-cta-actions"><Link className="button button-light" href="/team/">Team ansehen</Link><Link className="text-link text-link-light" href="/oeffnungszeiten/">Kontakt &amp; Öffnungszeiten <span aria-hidden="true">↗</span></Link></div></section><SiteFooter /><a className="mobile-call-bar" href={site.bookingUrl}><span aria-hidden="true">↗</span>Termin buchen</a></main>;
+}

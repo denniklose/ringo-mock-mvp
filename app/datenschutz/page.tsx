@@ -1,0 +1,7 @@
+import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
+import { site } from "../chaarisma-website-2026-data";
+
+export default function DatenschutzPage() {
+  return <main className="inner-page legal-page"><SiteHeader inner /><section className="legal-page-content"><p className="eyebrow">Rechtstexte</p><h1>Datenschutz</h1><p>Diese Hinweise beschreiben die Funktionen dieser Website für den Friseursalon Chaarisma.</p><h2>Verantwortliche Stelle</h2><p>{site.owner}<br />Friseursalon Chaarisma<br />{site.address[0]}<br />{site.address[1]}<br />Telefon: {site.phoneDisplay}</p><h2>Externe Buchung und Links</h2><p>Der Button „Termin buchen“ führt zur bestehenden Buchungsseite von Chaarisma bei dnfk.mitdenkt.io. Außerdem verlinkt diese Website die offizielle Website, Instagram, Facebook, Google-Bewertungen und Google Maps. Für die Verarbeitung auf diesen externen Seiten gelten die Datenschutzhinweise der jeweiligen Anbieter.</p><h2>Google Maps</h2><p>Google Maps wird auf dieser Website erst nach einem Klick auf „Karte laden“ eingebunden. Dabei können Daten an Google übertragen werden.</p><h2>Keine eigene Eingabemaske</h2><p>Diese Website enthält kein eigenes Kontaktformular und speichert keine Terminwünsche über eine eigene Eingabemaske. Für Fragen kannst du dich telefonisch unter {site.phoneDisplay} an Chaarisma wenden.</p></section><SiteFooter /></main>;
+}

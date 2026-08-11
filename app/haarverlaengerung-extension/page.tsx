@@ -1,0 +1,10 @@
+import Image from "next/image";
+import Link from "next/link";
+import InnerPageHero from "../components/InnerPageHero";
+import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
+import { site } from "../chaarisma-website-2026-data";
+
+export default function ExtensionPage() {
+  return <main className="inner-page extension-page"><SiteHeader inner /><InnerPageHero eyebrow="Haarverlängerung / Extension" title="Mehr Länge. Mehr Möglichkeiten." intro="Bei Chaarisma findest du Haarverlängerung und Extensions als eigenen Bereich in der Online-Buchung." ctaLabel="Extensions buchen" ctaHref={site.bookingUrl} /><section className="inner-feature-section"><div className="inner-feature-copy"><p className="section-kicker">Extension-Inspiration</p><h2>Dein neuer Look beginnt mit Beratung.</h2><p>Die bestehende Chaarisma-Buchung führt Extensions als eigene Leistung. Wähle sie dort aus und kläre deinen persönlichen Wunsch direkt im vorgesehenen Buchungsablauf.</p><a className="text-link" href="https://www.greatlengths.com/" target="_blank" rel="noreferrer">Great Lengths entdecken <span aria-hidden="true">↗</span></a></div><figure className="inner-feature-media extension-feature-media"><Image src="/images/extension-inspiration.png" alt="Kreative Inspiration für lange Haarlooks und Extensions" fill sizes="(max-width: 760px) 94vw, 58vw" /></figure></section><section className="inner-note-section inner-note-section-dark"><p className="section-kicker">Termin</p><h2>Alle Leistungen auf einen Blick.</h2><p>Die originale Buchungsseite enthält neben Extensions auch die weiteren veröffentlichten Bereiche von Chaarisma.</p><div className="final-cta-actions"><a className="button button-light" href={site.bookingUrl}>Online buchen</a><Link className="text-link text-link-light" href="/oeffnungszeiten/">Kontakt ansehen <span aria-hidden="true">↗</span></Link></div></section><SiteFooter /><a className="mobile-call-bar" href={site.bookingUrl}><span aria-hidden="true">↗</span>Termin buchen</a></main>;
+}
